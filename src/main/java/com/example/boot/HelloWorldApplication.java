@@ -1,13 +1,16 @@
-package example.java.helloWorld;
-
+package com.example.boot;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.concurrent.TimeUnit;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class Main {
+@SpringBootApplication
+public class HelloWorldApplication {
 
 	public static void main(String[] args) {
+		SpringApplication.run(HelloWorldApplication.class, args);
 		
 		System.out.println("Hello world");
 		String mvnversion = executeCommand("mvn --version");
@@ -17,7 +20,6 @@ public class Main {
 		System.out.println("mvn version: "+mvnversion);
 		System.out.println("java version: "+javaversion);
 		System.out.println("git version: "+gitversion);
-		
 	}
 	
 	public static String executeCommand(String command) {
@@ -39,4 +41,5 @@ public class Main {
 
 		return output.toString();
 	}
+
 }
