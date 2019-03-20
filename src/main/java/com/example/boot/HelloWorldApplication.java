@@ -12,7 +12,7 @@ public class HelloWorldApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HelloWorldApplication.class, args);
 		
-		System.out.println("Hello world");
+		System.out.println("Welcome to Ooty, nice to meet you");
 		String mvnversion = executeCommand("mvn --version");
 		String javaversion = executeCommand("java --version");
 		String gitversion = executeCommand("git --version");
